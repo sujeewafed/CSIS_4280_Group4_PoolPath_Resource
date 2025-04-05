@@ -1,9 +1,9 @@
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          audiences:
-          - poolpath
-          - poolpath-ui
-          issuer-uri: http://192.168.56.1:9000
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          audiences:
+#          - poolpath
+#          - poolpath-ui
+#          issuer-uri: http://192.168.56.1:9000
