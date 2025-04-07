@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.poolpath.controller;
 
 import java.util.List;
 

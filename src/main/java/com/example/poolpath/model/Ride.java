@@ -1,0 +1,111 @@
+package com.example.poolpath.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "rides")
+public class Ride {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
+	@Column(name = "origin")
+	private String origin;
+	
+	@Column(name = "destination")
+	private String destination;
+	
+	@Column(name = "seatsAvailable")
+	private int seatsAvailable;
+	
+	@Column(name = "phoneNumber")
+	private String phoneNumber;
+	
+	@Column(name = "datetime")
+	private LocalDateTime datetime;
+	
+	@Column(name = "userId")
+	private long userId;
+	
+	@Column(name = "createdDateTime")
+	private LocalDateTime createdDateTime;
+	
+	public Ride() {}
+
+	public Ride(String origin, String destination, int seatsAvailable, String phoneNumber, LocalDateTime datetime,
+			long userId) {
+		super();
+		this.origin = origin;
+		this.destination = destination;
+		this.seatsAvailable = seatsAvailable;
+		this.phoneNumber = phoneNumber;
+		this.datetime = datetime;
+		this.userId = userId;
+		this.createdDateTime = LocalDateTime.now();
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public int getSeatsAvailable() {
+		return seatsAvailable;
+	}
+
+	public void setSeatsAvailable(int seatsAvailable) {
+		this.seatsAvailable = seatsAvailable;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public LocalDateTime getDatetime() {
+		return datetime;
+	}
+
+	public void setDatetime(LocalDateTime datetime) {
+		this.datetime = datetime;
+	}
+
+	public long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+	
+}
