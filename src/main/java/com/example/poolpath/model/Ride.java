@@ -20,11 +20,23 @@ public class Ride {
 	@Column(name = "origin")
 	private String origin;
 	
+	@Column(name = "originAddress")
+	private String originAddress;
+	
 	@Column(name = "destination")
 	private String destination;
 	
+	@Column(name = "destinationAddress")
+	private String destinationAddress;
+	
 	@Column(name = "seatsAvailable")
 	private int seatsAvailable;
+	
+	@Column(name = "seatsCapacity")
+	private int seatsCapacity;
+	
+	@Column(name = "isFull")
+	private boolean isFull;
 	
 	@Column(name = "phoneNumber")
 	private String phoneNumber;
@@ -40,12 +52,15 @@ public class Ride {
 	
 	public Ride() {}
 
-	public Ride(String origin, String destination, int seatsAvailable, String phoneNumber, LocalDateTime datetime,
+	public Ride(String origin, String originAddress, String destination, String destinationAddress, int seatsAvailable, int seatsCapacity, boolean isFull, String phoneNumber, LocalDateTime datetime,
 			long userId) {
-		super();
 		this.origin = origin;
+		this.originAddress = originAddress;
 		this.destination = destination;
+		this.destinationAddress = destinationAddress;
 		this.seatsAvailable = seatsAvailable;
+		this.seatsCapacity = seatsCapacity;
+		this.isFull = isFull;
 		this.phoneNumber = phoneNumber;
 		this.datetime = datetime;
 		this.userId = userId;
@@ -107,5 +122,39 @@ public class Ride {
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}
+
+	public int getSeatsCapacity() {
+		return seatsCapacity;
+	}
+
+	public void setSeatsCapacity(int seatsCapacity) {
+		this.seatsCapacity = seatsCapacity;
+	}
+
+	public boolean isFull() {
+		return isFull;
+	}
+
+	public void setFull(boolean isFull) {
+		this.isFull = isFull;
+	}
+
+	public String getOriginAddress() {
+		return originAddress;
+	}
+
+	public void setOriginAddress(String originAddress) {
+		this.originAddress = originAddress;
+	}
+
+	public String getDestinationAddress() {
+		return destinationAddress;
+	}
+
+	public void setDestinationAddress(String destinationAddress) {
+		this.destinationAddress = destinationAddress;
+	}
+	
+	
 	
 }
