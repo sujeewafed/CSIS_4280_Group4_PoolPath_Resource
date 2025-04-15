@@ -41,7 +41,6 @@ public class UserController {
 		}
 	}
 	
-	
 	// To get an user by username
 	@GetMapping("/users/by_username")
 	public ResponseEntity<User> getUserByUsername(@PathVariable("username") String username) {
