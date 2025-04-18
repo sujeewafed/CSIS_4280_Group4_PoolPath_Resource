@@ -6,4 +6,4 @@
           audiences:
           - poolpath
           - poolpath-ui
-          issuer-uri: http://0.0.0.0:9000
+          issuer-uri: http://10.1.0.27:9000
