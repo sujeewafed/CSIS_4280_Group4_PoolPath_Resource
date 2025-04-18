@@ -34,14 +34,14 @@ public class PoolpathresourceApplication {
 		
 		// Adding users 
 		ArrayList<User> users = new ArrayList<>();
-		users.add(new User("user1", "user1", "User1", "7782236958"));
-		users.add(new User("user2", "user2", "User2", "7788753648"));
+		users.add(new User("user1@gmail.com", "user1", "User1", "7782236958"));
+		users.add(new User("user2@gmail.com", "user2", "User2", "7788753648"));
 		userRepository.saveAll(users);
 		
 		// Adding rides 
 		ArrayList<Ride> rides = new ArrayList<>();
-		rides.add(new Ride("BC Place", "BC Place", "Douglas College", "Douglas College New west", 20, 20, false, "7789962256",  LocalDateTime.parse("2025-04-07T10:00:00"), 1));
-		rides.add(new Ride("Royal BC Museum", "Royal BC Museum", "Vancouver", "Vancouver burrard station", 30, 30, false, "77825639878",  LocalDateTime.parse("2025-04-10T10:00:00"), 1));
+		rides.add(new Ride("BC Place", "BC Place", "Douglas College", "Douglas College New west", 20, 20, false, "7789962256",  LocalDateTime.parse("2025-12-07T10:00:00"), 1, 100));
+		rides.add(new Ride("Royal BC Museum", "Royal BC Museum", "Vancouver", "Vancouver burrard station", 30, 30, false, "77825639878",  LocalDateTime.parse("2025-12-10T10:00:00"), 1, 100));
 		rideRepository.saveAll(rides);
 	}
 }

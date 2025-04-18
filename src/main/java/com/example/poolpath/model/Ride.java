@@ -50,10 +50,13 @@ public class Ride {
 	@Column(name = "createdDateTime")
 	private LocalDateTime createdDateTime;
 	
+	@Column(name = "price")
+	private double price;
+	
 	public Ride() {}
 
 	public Ride(String origin, String originAddress, String destination, String destinationAddress, int seatsAvailable, int seatsCapacity, boolean isFull, String phoneNumber, LocalDateTime datetime,
-			long userId) {
+			long userId, double price) {
 		this.origin = origin;
 		this.originAddress = originAddress;
 		this.destination = destination;
@@ -65,6 +68,7 @@ public class Ride {
 		this.datetime = datetime;
 		this.userId = userId;
 		this.createdDateTime = LocalDateTime.now();
+		this.price = price;
 	}
 
 	public long getId() {
@@ -155,6 +159,14 @@ public class Ride {
 		this.destinationAddress = destinationAddress;
 	}
 	
+	// --- ADD THIS GETTER ---
+	public LocalDateTime getCreatedDateTime() {
+		return createdDateTime;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
 	
 	
 }
